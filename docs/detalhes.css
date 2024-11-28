@@ -1,0 +1,118 @@
+/* Reset de estilo para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garantir que padding e bordas não afetem a largura total */
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    color: #333;
+    line-height: 1.6;
+    padding: 2vh 5%;
+    width: 100vw;
+    overflow-x: hidden; /* Evitar que o conteúdo ultrapasse a largura da tela */
+}
+
+/* Conteúdo principal */
+#content {
+    margin-bottom: 4vh;
+    text-align: center;
+}
+
+#content h1 {
+    color: #2c3e50;
+    margin-bottom: 2vh;
+}
+
+/* Detalhes da receita */
+#detalhesReceita {
+    background-color: #b2ebf2;
+    padding: 3vh;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    margin: 2vh auto;
+    width: 90%;
+    max-width:1200px;
+}
+
+#detalhesReceita img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+a.unico {
+    text-decoration: none;
+    color: #2980b9;
+    font-size: 1rem;
+    margin-top: 2vh;
+    display: inline-block;
+    padding: 1vh 2vw;
+    border-radius: 5px;
+    border: 1px solid #2980b9;
+}
+
+a.unico:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Estilos para as listas de ingredientes e modo de preparo */
+ul, ol {
+    padding-left: 2rem; /* Adiciona um pouco de espaço à esquerda */
+    margin-bottom: 2vh;
+    list-style-position: inside; /* Mantém os marcadores dentro da caixa */
+}
+
+ul {
+    list-style-type: disc; /* Marcadores circulares para ingredientes */
+}
+
+ol {
+    list-style-type: decimal; /* Números para o modo de preparo */
+}
+
+/* Estilo dos itens das listas */
+li {
+    margin-bottom: 1vh;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Ajustes para telas menores que 420px */
+@media (max-width: 420px) {
+    body {
+        padding: 2vh 4%; /* Menos padding para dispositivos móveis */
+    }
+
+    #detalhesReceita {
+        width: 90%; /* Ajusta a largura para telas pequenas */
+        margin: 2vh auto; /* Centraliza e aplica margens em todas as direções */
+    }
+
+    h2, h3, p {
+        font-size: 4vw; /* Ajusta o tamanho da fonte para melhorar a legibilidade em telas pequenas */
+    }
+
+    a {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    }
+}
+
+/* Estilos para telas maiores que 420px */
+@media (min-width: 420px) {
+    #detalhesReceita {
+        width: 80vw; /* Ajuste para telas maiores */
+    }
+}
+
+/* Estilos para telas acima de 768px */
+@media (min-width: 768px) {
+    #detalhesReceita {
+        width: 70vw; /* Ajuste para telas grandes */
+    }
+}
