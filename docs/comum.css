@@ -1,0 +1,101 @@
+/* Cabeçalho superior */
+.cima {
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Padrão para telas pequenas (mobile-first) */
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    padding:1vh 2vw;
+    position: relative; /* Permite posicionar o botão de forma absoluta */
+    width:100%;
+    margin:0 auto;
+}
+
+.logo-btn img {
+    width: 30vw; /* Ajuste para telas pequenas */
+    height: auto;
+    max-width: 100%;
+}
+
+.adicionar-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 1vh 2vw;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    position: absolute; /* Faz o botão se posicionar em relação ao seu contêiner */
+    top: 1vh; /* Distância do topo */
+    right: 2vw; /* Distância da borda direita */
+}
+
+.adicionar-btn:hover {
+    background-color: #3498db;
+}
+
+footer {
+    text-align: center;
+    padding: 1vh 0;
+    background-color: #2980b9;
+    color: white;
+    margin-top: 2vh;
+}
+
+/* Estilos para telas menores que 420px */
+@media (max-width: 420px) {
+    .cima {
+        flex-direction: column; /* Empilha logo e botão para telas menores */
+        align-items: center;
+        justify-content: flex-start;
+        margin:0;
+    }
+
+    .logo-btn img {
+        width: 40vw; /* Ajusta o tamanho da imagem no logo para telas muito pequenas */
+    }
+
+    .adicionar-btn {
+        margin-top: 2vh; /* Coloca o botão abaixo do logo */
+        width: 100%; /* Ajusta o tamanho do botão para ocupar toda a largura disponível */
+        max-width: 100%; /* Garante que o botão não ultrapasse a tela */
+        margin-bottom: 2vh; /* Espaçamento inferior para o botão */
+        position: static; /* Remove o posicionamento absoluto para evitar sobreposição */
+    }
+}
+
+@media (min-width: 420px) {
+    .cima {
+        flex-direction: row; /* Títulos e botões lado a lado */
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        margin:0 auto;
+    }
+
+    .logo-btn img {
+        width: 15vw; /* Ajuste para telas médias */
+    }
+    .adicionar-btn {
+        top: 1vh; /* Fica no topo com uma distância de 1vh */
+        right: 2vw; /* Fica no canto direito com uma distância de 2vw */
+        margin: 0; /* Remove margem extra */
+        width: auto; /* Garantir que o botão tenha um tamanho automático, ajustado ao conteúdo */
+        max-width: 90vw; /* Limita o tamanho máximo do botão para 90% da largura da tela */
+    }
+}
+
+@media (min-width: 768px) {
+    .cima {
+        justify-content: space-between;
+        margin:0;
+    }
+
+    .logo-btn img {
+        width: 10vw;
+    }
+}
