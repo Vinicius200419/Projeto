@@ -1,0 +1,135 @@
+/* Reset de estilo para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garantir que padding e bordas não afetem a largura total */
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    color: #333;
+    line-height: 1.6;
+    padding: 2vh;
+    width: 100vw;
+    overflow-x: hidden; /* Evitar que o conteúdo ultrapasse a largura da tela */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 2vh;
+}
+
+/* Formulário de Edição de Receita */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 0 auto;
+    max-width: 90vw;
+}
+
+/* Estilo dos campos do formulário */
+form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    padding: 1vh;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Ajustes para o campo de ingredientes e preparo */
+textarea {
+    resize: vertical;
+    padding: 1vh;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Estilo do botão de envio */
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Estilos para telas menores que 420px */
+@media (max-width: 420px) {
+    /* Ajustes no título */
+    h1 {
+        font-size: 6vw;
+    }
+
+    /* Ajuste no formulário */
+    form {
+        max-width: 100%;
+        padding: 2vh 0;
+    }
+
+    /* Ajuste do botão */
+    button {
+        width: 80%;
+    }
+}
+
+/* Estilos para telas maiores que 420px */
+@media (min-width: 420px) {
+    /* Ajustes no título */
+    h1 {
+        font-size: 4vw;
+    }
+
+    /* Ajustes no formulário */
+    form {
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    /* Ajuste do botão */
+    button {
+        width: auto;
+    }
+}
+
+/* Estilos para telas acima de 768px */
+@media (min-width: 768px) {
+    /* Ajustes no título */
+    h1 {
+        font-size: 3vw;
+    }
+
+    /* Ajustes no formulário */
+    form {
+        max-width: 60vw;
+    }
+
+    /* Ajuste do botão */
+    button {
+        padding: 1vh 2vw;
+    }
+}
