@@ -1,0 +1,122 @@
+/* Reset de estilo para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garantir que padding e bordas não afetem a largura total */
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    color: #333;
+    line-height: 1.6;
+    padding: 2vh;
+    width: 100vw;
+    overflow-x: hidden; /* Evitar que o conteúdo ultrapasse a largura da tela */
+}
+
+/* Conteúdo principal */
+#content {
+    margin-bottom: 4vh;
+}
+
+#content h2 {
+    color: #2c3e50;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+/* Receitas - Layout mobile-first (1 receita por linha) */
+#receitas {
+    display: flex;
+    flex-direction: column; /* Padrão para telas pequenas */
+    gap: 2vh;
+    justify-content: center;
+}
+
+/* Estilo de cada receita */
+.receita {
+    background-color: #b2ebf2;
+    padding: 2vh;
+    border-radius: 1rem;
+    text-align: center;
+    width: 85vw; /* Padrão para telas pequenas */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Ajustes nas imagens para que elas não saiam da box */
+.receita img {
+    width: 100%; /* Garantir que a imagem ocupe 100% da largura da box */
+    height: auto; /* Manter a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+    border-radius: 1rem; /* Bordas arredondadas na imagem */
+}
+
+.editar-btn, .excluir-btn{
+    border-radius:5px;
+    background-color: #2980b9;
+    color:white;
+    font-size:15px;
+}
+
+.editar-btn:hover, .excluir-btn:hover{
+    cursor:pointer;
+    background-color: #3498db;
+}
+
+.detalhesLink{
+    text-decoration:none;
+    border:1px solid black;
+    border-radius:5px;
+    background-color: #2980b9;
+    color:white;
+    font-size:15px;
+}
+.detalhesLink:hover{
+    background-color: #3498db;
+}
+
+/* Estilos para telas menores que 420px */
+@media (max-width: 420px) {
+    
+    /* Layout das receitas - uma por linha */
+    #receitas {
+        flex-direction: column; /* Layout para telas menores */
+        gap: 2vh;
+        justify-content: center;
+    }
+
+    .receita {
+        width: 90vw; /* Garantir que a receita ocupe a largura da tela */
+        margin: 0 auto;
+    }
+}
+
+/* Estilos para telas maiores que 420px */
+@media (min-width: 420px) {
+    /* Layout das receitas - 3 por linha */
+    #receitas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 2vw; /* Adiciona espaçamento horizontal */
+    }
+
+    .receita {
+        width: 30vw; /* 3 receitas por linha */
+        margin-bottom: 2vh; /* Adiciona espaçamento entre as receitas */
+    }
+}
+
+/* Estilos para telas acima de 768px */
+@media (min-width: 768px) {
+    #receitas {
+        justify-content: space-between;
+    }
+
+    .receita {
+        width: 22vw; /* Ajuste para telas grandes */
+    }
+}
