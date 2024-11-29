@@ -1,1 +1,10 @@
-
+CREATE TABLE receitas (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nome TEXT NOT NULL,
+  tempo INTEGER NOT NULL,
+  serve INTEGER NOT NULL,
+  dificuldade TEXT NOT NULL,
+  ingredientes TEXT NOT NULL,
+  preparo TEXT NOT NULL,
+  imagem TEXT
+);
