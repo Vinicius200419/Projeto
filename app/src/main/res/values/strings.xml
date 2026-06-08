@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Receitas Simples</string>
+    <string name="title_activity_main">Receitas</string>
+    <string name="title_activity_detail">Detalhes da Receita</string>
+    <string name="title_activity_add_edit">Adicionar/Editar Receita</string>
+    <string name="btn_add">Adicionar</string>
+    <string name="btn_save">Salvar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_edit">Editar</string>
+    <string name="btn_delete">Excluir</string>
+    <string name="hint_recipe_name">Nome da Receita</string>
+    <string name="hint_time">Tempo de Preparo</string>
+    <string name="hint_servings">Porções</string>
+    <string name="label_ingredients">Ingredientes</string>
+    <string name="label_instructions">Modo de Preparo</string>
+    <string name="empty_recipes">Nenhuma receita encontrada</string>
+    <string name="delete_confirmation">Deseja realmente excluir esta receita?</string>
+</resources>

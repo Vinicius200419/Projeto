@@ -1,0 +1,4 @@
+# Android SDK location (altere para seu ambiente)
+# sdk.dir=/Users/username/Library/Android/sdk
+# ou para Windows
+# sdk.dir=C:\\Users\\username\\AppData\\Local\\Android\\sdk
